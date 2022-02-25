@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B67B6C3727C91D2300BB6E61 /* SharedFunctionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67B6C3627C91D2300BB6E61 /* SharedFunctionsAndConstants.swift */; };
 		B67E7FE227C54480001F27E3 /* DadJokesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E7FE127C54480001F27E3 /* DadJokesApp.swift */; };
 		B67E7FE427C54480001F27E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67E7FE327C54480001F27E3 /* ContentView.swift */; };
 		B67E7FE627C54488001F27E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67E7FE527C54488001F27E3 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B67B6C3627C91D2300BB6E61 /* SharedFunctionsAndConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFunctionsAndConstants.swift; sourceTree = "<group>"; };
 		B67E7FDE27C54480001F27E3 /* DadJokes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DadJokes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67E7FE127C54480001F27E3 /* DadJokesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokesApp.swift; sourceTree = "<group>"; };
 		B67E7FE327C54480001F27E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B67B6C3527C91CEF00BB6E61 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B67B6C3627C91D2300BB6E61 /* SharedFunctionsAndConstants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B67E7FD527C54480001F27E3 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				B67E7FE127C54480001F27E3 /* DadJokesApp.swift */,
+				B67B6C3527C91CEF00BB6E61 /* Helpers */,
 				B67E7FEF27C549EB001F27E3 /* Model */,
 				B67E7FF027C549F4001F27E3 /* Views */,
 				B67E7FE527C54488001F27E3 /* Assets.xcassets */,
@@ -156,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B67B6C3727C91D2300BB6E61 /* SharedFunctionsAndConstants.swift in Sources */,
 				B67E7FE427C54480001F27E3 /* ContentView.swift in Sources */,
 				B67E7FE227C54480001F27E3 /* DadJokesApp.swift in Sources */,
 				B67E7FF227C54A49001F27E3 /* DadJoke.swift in Sources */,
