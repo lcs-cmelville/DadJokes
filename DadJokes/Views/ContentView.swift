@@ -10,9 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     //MARK: Stored Properties
-   @State var currentJoke: DadJoke = DadJoke(id: "",
-                                       joke: "Knock knock...",
-                                       status: 0)
+    
+    // Detect when an app  moves between foreground, background, and inactive states
+    @Environment(\.scenePhase) var scenePhase
+    
+    @State var currentJoke: DadJoke = DadJoke(id: "",
+                                              joke: "Knock knock...",
+                                              status: 0)
     // This will keep track of our list of favourite jokes
     @State var favourites: [DadJoke] = []   // enpty list to start
     
@@ -48,7 +52,7 @@ struct ContentView: View {
                         
                         // Record that we have marked this as a favourite
                         currentJokeAddedToFavourites = true
-
+                        
                     }
                 }
             
@@ -66,12 +70,12 @@ struct ContentView: View {
                 .buttonStyle(.bordered)
             
             HStack{
-            
-            Text("Favourites")
-                .bold()
-                .multilineTextAlignment(.leading)
-                .font(.title3)
-                .padding()
+                
+                Text("Favourites")
+                    .bold()
+                    .multilineTextAlignment(.leading)
+                    .font(.title3)
+                    .padding()
                 
                 Spacer()
             }
@@ -83,7 +87,7 @@ struct ContentView: View {
             }
             
             Spacer()
-                        
+            
         }
         // When the app opens, get a new joke from the web service
         .task {
@@ -95,6 +99,19 @@ struct ContentView: View {
             await loadNewJoke()
             
             print("I tried to load a new joke")
+            
+        }
+        
+        // React to changes of state for the app, foreground, background, and inactive
+        .onChange(of: scenePhase) { newPhase in
+           
+            if newPhase == .inactive{
+                print("Inactive")
+            } else if newPhase == .active {
+                print("Active")
+            } else {
+                print("Background")
+            }
             
         }
         .navigationTitle("icanhazdadjoke?")
